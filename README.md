@@ -1,70 +1,179 @@
-# Getting Started with Create React App
+# Place-Mate ☕
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern placement tracking platform designed for students to monitor their daily progress during the placement season. Built with a warm coffee-themed interface featuring elegant brown hues.
 
-## Available Scripts
+## 📋 Project Overview
 
-In the project directory, you can run:
+Place-Mate helps students stay organized during their placement journey by providing tools to track applications, prepare for interviews, manage resources, and visualize their progress through an intuitive dashboard.
 
-### `npm start`
+## 🏗️ Architecture
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend Framework**: React.js with React Router for navigation
+- **Styling**: Tailwind CSS with custom coffee-themed color palette
+- **Authentication**: Firebase Authentication
+- **Database**: Firebase Firestore
+- **State Management**: React Context API
+- **Build Tool**: Create React App
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Project Structure
 
-### `npm test`
+```
+place-mate-clean/
+├── public/                  # Static files
+├── src/
+│   ├── assets/             # Images, icons, and static resources
+│   ├── components/         # Reusable React components
+│   │   ├── ChartCard.jsx
+│   │   ├── ProtectedRoute.jsx
+│   │   ├── RecentActivityCard.jsx
+│   │   ├── Sidebar.jsx
+│   │   ├── SkillProgress.jsx
+│   │   ├── StatCard.jsx
+│   │   └── UpcomingTestCard.jsx
+│   ├── context/            # React Context for state management
+│   │   └── AuthContext.js
+│   ├── firebase/           # Firebase configuration and operations
+│   │   ├── firebase.js
+│   │   ├── firestore.js
+│   │   ├── firestoreOps.js
+│   │   └── dashboardOps.js
+│   ├── layout/             # Layout components
+│   │   └── MainLayout.jsx
+│   ├── pages/              # Page components
+│   │   ├── Auth/
+│   │   │   ├── Login.jsx
+│   │   │   └── Signup.jsx
+│   │   ├── Achievements.jsx
+│   │   ├── Applications.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── Preparation.jsx
+│   │   ├── Resources.jsx
+│   │   └── Timeline.jsx
+│   ├── App.js              # Main application component
+│   ├── index.js            # Application entry point
+│   ├── index.css           # Global styles
+│   └── theme.js            # Theme configuration
+├── .gitignore
+├── package.json
+├── tailwind.config.js      # Tailwind CSS configuration
+└── postcss.config.js       # PostCSS configuration
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Setup Instructions
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (v14 or higher)
+- npm or yarn
+- Firebase account
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Healer3504/Place-Mate.git
+   cd place-mate-clean
+   ```
 
-### `npm run eject`
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Configure Firebase**
+   - Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
+   - Enable Authentication (Email/Password)
+   - Create a Firestore database
+   - Copy your Firebase configuration
+   - Update `src/firebase/firebase.js` with your credentials
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🖥️ Running the Application
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+# Development mode
+npm start
 
-## Learn More
+# Build for production
+npm run build
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Run tests
+npm test
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The application will open at `http://localhost:3000`
 
-### Code Splitting
+## 💡 Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Sign Up/Login**: Create an account or log in with existing credentials
+2. **Dashboard**: View your placement statistics and recent activities
+3. **Applications**: Track all your job applications in one place
+4. **Preparation**: Access preparation materials and track your progress
+5. **Timeline**: Visualize your placement journey chronologically
+6. **Resources**: Browse and organize placement resources
+7. **Achievements**: Celebrate your milestones and successes
 
-### Analyzing the Bundle Size
+## ✨ Key Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **📊 Dashboard Analytics**: Real-time visualization of your placement progress
+- **📝 Application Tracking**: Manage job applications with status updates
+- **📚 Resource Management**: Organize study materials and resources
+- **⏱️ Timeline View**: Track your placement journey over time
+- **🎯 Preparation Tools**: Monitor your preparation progress
+- **🏆 Achievement System**: Track milestones and celebrate wins
+- **🔐 Secure Authentication**: Firebase-powered user authentication
+- **☕ Coffee Theme**: Warm, aesthetic brown color palette for comfortable viewing
 
-### Making a Progressive Web App
+## 🛠️ Technology Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **React.js** - Frontend library
+- **React Router DOM** - Navigation and routing
+- **Tailwind CSS** - Utility-first CSS framework
+- **Firebase** - Authentication and database
+- **PostCSS** - CSS processing
 
-### Advanced Configuration
+## 💻 System Requirements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Node.js**: v14.0.0 or higher
+- **npm**: v6.0.0 or higher
+- **Modern web browser** (Chrome, Firefox, Safari, Edge)
+- **Active internet connection** for Firebase services
 
-### Deployment
+## 🔧 Troubleshooting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Common Issues
 
-### `npm run build` fails to minify
+**Issue**: `npm start` fails
+```bash
+# Solution: Clear node_modules and reinstall
+rm -rf node_modules package-lock.json
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Issue**: Firebase connection errors
+- Verify your Firebase configuration in `src/firebase/firebase.js`
+- Check Firebase project settings and ensure all services are enabled
+- Confirm API keys are correct
+
+**Issue**: Styling not loading
+```bash
+# Rebuild Tailwind CSS
+npm run build:css
+```
+
+**Issue**: Authentication not working
+- Check Firebase Authentication is enabled in Firebase Console
+- Verify email/password sign-in method is activated
+- Clear browser cache and cookies
+
+---
+
+**Note**: This project is currently under development. Some features may be incomplete or subject to change.
+
+**Maintained by**: [Healer3504](https://github.com/Healer3504)
+
+**License**: MIT
